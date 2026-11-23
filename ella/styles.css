@@ -1,0 +1,9 @@
+/* Estilos globales y fuentes para la carta */
+body {
+font-family: 'Montserrat', sans-serif;
+}
+
+/* Fuente cursiva para los títulos y la firma de la carta */
+.font-cursive {
+font-family: 'Great Vibes', cursive;
+}

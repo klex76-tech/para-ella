@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una sorpresa para ti ✨</title>
+    <!-- Framework Tailwind CSS para estilos rápidos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Archivo CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-pink-100 via-purple-50 to-pink-200 min-h-screen flex items-center justify-center p-4 select-none relative overflow-hidden">
+
+    <!-- REPRODUCTOR DE MÚSICA LOCAL (esperame en el cielo Instrumental) -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="Proyecto.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Botón flotante para controlar el audio -->
+    <button id="music-control" class="fixed top-4 right-4 z-50 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-md border border-pink-200 text-gray-700 text-xs md:text-sm font-semibold flex items-center gap-2 hover:bg-white transition-all active:scale-95">
+        <i id="music-icon" class="fa-solid fa-music text-pink-500"></i>
+        <span id="music-text">Música: Pausada</span>
+    </button>
+
+    <!-- TARJETA PRINCIPAL -->
+    <main class="relative z-10 w-full max-w-md mx-auto">
+        
+        <!-- PANTALLA 1: La Pregunta Interactiva -->
+        <div id="step-1" class="bg-white/85 backdrop-blur-md rounded-3xl p-8 md:p-10 shadow-2xl border border-pink-100 text-center transition-all duration-500 transform scale-100">
+            <!-- Imagen del gatito con flores -->
+            <div class="w-36 h-36 mx-auto mb-6 drop-shadow-md">
+                <img src="gato flores.jpg" alt="Gatito con flores" class="w-full h-full object-contain animate-pulse">
+            </div>
+
+            <!-- Título y Pregunta -->
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-3 tracking-tight">
+                ¡Hola! 
+            </h1>
+            <p class="text-gray-600 text-base md:text-lg mb-8 leading-relaxed">
+                Tengo algo muy especial guardado para ti... <br>
+                <span class="font-semibold text-pink-600">¿Quieres ver algo?</span>
+            </p>
+
+            <!-- Botones Interactivos -->
+            <div id="button-wrapper" class="flex flex-col sm:flex-row items-center justify-center gap-4 min-h-[100px] relative">
+                <!-- Botón SÍ -->
+                <button id="si-btn" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold rounded-full shadow-lg shadow-pink-500/30 hover:shadow-xl hover:from-pink-600 hover:to-rose-600 transition-all duration-300 transform active:scale-95 z-20">
+                    ¡Sí, quiero ver! 
+                </button>
+
+                <!-- Botón NO -->
+                <button id="no-btn" class="w-full sm:w-auto px-6 py-3.5 bg-gray-200 text-gray-700 font-medium rounded-full hover:bg-gray-300 transition-all duration-200 z-10">
+                    No por ahora 
+                </button>
+            </div>
+
+            <!-- Mensaje divertido cuando intenta pulsar NO -->
+            <p id="funny-text" class="text-pink-500 text-sm font-medium mt-6 h-6 transition-opacity duration-300 opacity-0"></p>
+        </div>
+
+        <!-- PANTALLA 2: La Carta Romántica -->
+        <div id="step-2" class="hidden opacity-0 scale-95 bg-white/90 backdrop-blur-md rounded-3xl p-8 md:p-10 shadow-2xl border border-pink-100 transition-all duration-700 text-left relative overflow-hidden">
+            <!-- Encabezado de la carta -->
+            <div class="flex items-center justify-between border-b border-pink-100 pb-4 mb-6">
+                <span class="text-xs uppercase tracking-widest text-pink-400 font-semibold">Una nota especial para una niña especial</span>
+                <i class="fa-solid fa-sparkles text-pink-400 text-sm"></i>
+            </div>
+
+            <!-- Contenido de la Carta (-->
+            <div class="space-y-4 text-gray-700 leading-relaxed text-sm md:text-base font-light">
+                <p class="font-medium text-gray-900 text-xl font-cursive">
+                    Hola Chula,
+                </p>
+                <p>
+                    Quería tomarme un momento para hacer algo diferente y prepararte este detalle. solo queria disculparme por como me comporte y como te hice sentir.
+                </p>
+                <p>
+                    pues eres una persona especial para mi y lo ultimo que quiero es que estemos mal tu y yo ;-;
+                    siendo que sabes como es mi sentir por ti, dare mi mayor esfuerzo para que no te haga sentir asi otra ves y hacerte la mujer mas feliz de este fokin word 
+                </p>
+
+                <p>
+                    dare mi mejor version para poder darte el cariño que te mereces pues eres una mujer que se merece el cielo, mar y tierra solo por ser ella
+                </p>
+                <p class="pt-4 font-cursive text-2xl text-pink-600 text-right font-medium">
+                    Con mucho cariño K
+                </p>
+            </div>
+
+            <!-- Botón para regresar -->
+            <div class="mt-8 text-center pt-4 border-t border-pink-100">
+                <button id="reset-btn" class="text-xs text-gray-400 hover:text-pink-500 transition-colors">
+                    <i class="fa-solid fa-rotate-left mr-1"></i> Volver al inicio
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Archivo JS Personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
